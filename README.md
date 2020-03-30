@@ -1,0 +1,2 @@
+# GoMessagingMail-
+Golang mail service
