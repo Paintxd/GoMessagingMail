@@ -1,0 +1,31 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+</head>
+
+<body style="margin: 0; font-family: Arial, Helvetica, sans-serif;">
+  <div style="background: #f3f3f3; padding: 200px 100px;">
+
+    <img style="margin: 0px auto;display: block; margin-bottom: 50px;"
+      src="http://www.compasso.com.br/wp-content/uploads/2020/02/LogoCompasso-preto.png" />
+
+    <div style="text-align: center;">
+      <h1>Olá <span style="color: #ffb500;">{{.Nome}}</span>!</h1>
+      <div>
+        {{if eq .Tipo "compra"}}
+        <h3>Sua compra no valor de</h3>
+        <h1 style="color: #ffb500;">CP$ {{.Valor}}</h1>
+        <h3>foi efetuada com Sucesso!</h3>
+
+        {{else}}
+        <h3>Sua transferência no valor de</h3>
+        <h1 style="color: #ffb500;">CP$ {{.Valor}}</h1>
+        <h3>para {{.Destinatario}} foi efetuada com Sucesso!</h3>
+
+        {{end}}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
